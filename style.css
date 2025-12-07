@@ -1,0 +1,231 @@
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+.poster-wrap {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #f6c7db; 
+  overflow: hidden;
+}
+
+
+.poster-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  z-index: 0;
+}
+
+/* ---------------- 가격 스타일 ---------------- */
+
+/* 가격표 공통 스타일 */
+.price {
+  position: absolute; 
+  image-rendering: pixelated; 
+  cursor: pointer;
+  z-index: 10; 
+  transform-origin: center center;
+  transition: transform 0.2s ease-out;
+}
+
+
+.price-1 {
+  top: 30.8%;
+  left: 14.7%;
+  width: 7vw;
+}
+
+
+.price-2 {
+  top: 30.9%;
+  left: 32%;
+  width: 7vw;
+}
+
+
+.price-3 {
+  top: 30.9%;
+  left: 49.3%;
+  width: 7vw;
+}
+
+
+.price-4 {
+  top: 57.7%;
+  left: 14.7%;
+  width: 7vw;
+}
+
+
+.price-5 {
+  top: 57.7%;
+  left: 32%;
+  width: 7vw;
+}
+
+
+.price-6 {
+  top: 57.7%;
+  left: 49%;
+  width: 7vw;
+}
+
+
+.price-7 {
+  top: 84.2%;
+  left: 14.7%;
+  width: 7vw;
+}
+
+
+.price-8 {
+  top: 84.2%;
+  left: 32%;
+  width: 7vw;
+}
+
+
+.price-9 {
+  top: 84.2%;
+  left: 49.2%;
+  width: 7vw;
+}
+
+/* hover 효과 (공통) */
+.price:hover {
+  transform: scale(1.05); 
+  z-index: 11; 
+
+/* 캐릭터 스타일 */
+.girl {
+  position: absolute;
+  width: 28%; 
+  top: 41.5%;
+  left: 80%; 
+  transform: translate(-50%, 0);
+  image-rendering: pixelated; 
+  z-index: 4; 
+  pointer-events: none;
+}
+
+
+.outer {
+  position: absolute;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 6; /* girl(5)보다 위에 */
+  opacity: 0; /* 기본은 안 보이게 */
+  transition: opacity 0.2s ease-out;
+  filter: brightness(1);
+}
+
+
+#outer1 {
+  width: 11%;
+  top: 45%;
+  left: 80.1%;
+  transform: translate(-50%, 0);
+}
+
+
+#outer2 {
+  width: 13%; 
+  top: 44%; 
+  left: 79.7%;
+  transform: translate(-50%, 0);
+}
+
+
+#outer3 {
+  width: 10%; 
+  top: 51.5%;
+  left: 80.2%;
+  transform: translate(-50%, 0);
+}
+
+
+.outer.show {
+  opacity: 1;
+}
+
+
+@keyframes flashEffect {
+  0% {
+    filter: brightness(2.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+
+.outer.flash {
+  animation: flashEffect 0.25s ease-out;
+}
+
+.bottom.flash {
+  animation: flashEffect 0.25s ease-out;
+}
+
+/* ================= 하의(치마) 공통 ================= */
+
+.bottom {
+  position: absolute;
+  image-rendering: pixelated;
+  pointer-events: none; 
+  opacity: 0; 
+  transition: opacity 0.25s ease-out;
+  z-index: 5; 
+
+
+#bottom1 {
+  width: 20%; 
+  top: 45%;
+  left: 80.1%;
+  transform: translate(-50%, 0);
+}
+
+
+#bottom2 {
+  width: 9%;
+  top: 65%;
+  left: 80%;
+  transform: translate(-50%, 0);
+}
+
+
+#bottom3 {
+  width: 11%;
+  top: 65%;
+  left: 80%;
+  transform: translate(-50%, 0);
+}
+
+
+.bottom.show {
+  opacity: 1;
+}
+
+
+@keyframes flashEffect {
+  0% {
+    filter: brightness(2.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+
+.bottom.flash {
+  animation: flashEffect 0.25s ease-out;
+}
