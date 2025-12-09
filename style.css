@@ -15,6 +15,11 @@ body {
   height: 100%;
 }
 
+/* 전체 자판기 박스 */
+.vending-container {
+  position: relative;
+}
+
 .poster-wrap {
   position: relative;
   width: 100vw;
@@ -261,6 +266,18 @@ body {
   animation: flashEffect 0.25s ease-out;
 }
 
+/* 총 가격 박스가 들어갈 영역 */
+.total-price-group {
+  position: relative;
+  top: 32%; /* 예전 #total-price top, left를 여기로 옮기는 느낌 */
+  left: 73%;
+  width: 18%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #total-price {
   position: absolute;
   image-rendering: pixelated;
@@ -281,18 +298,6 @@ body {
   left: 5%;
   width: 95%;
   height: 95%;
-}
-
-/* 총 가격 박스가 들어갈 영역 */
-.total-price-group {
-  position: relative;
-  top: 32%; /* 예전 #total-price top, left를 여기로 옮기는 느낌 */
-  left: 73%;
-  width: 18%;
-  height: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* 공통 라벨 */
